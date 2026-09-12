@@ -67,6 +67,7 @@ h1 {
 
 .stSelectbox [data-baseweb="select"] input {
     color: black !important;
+    caret-color: black !important;
 }
 
 .stSelectbox [data-baseweb="select"] svg {
