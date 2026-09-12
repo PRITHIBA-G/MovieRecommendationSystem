@@ -18,14 +18,17 @@ st.markdown("""
     background: linear-gradient(to right, #141E30, #243B55);
     color: white;
 }
+
 h1 {
     text-align: center;
     color: #FFD700;
 }
+
 .subtitle {
     text-align: center;
     color: #E0E0E0;
 }
+
 .movie-card {
     background-color: rgba(255,255,255,0.1);
     padding: 18px;
@@ -33,12 +36,15 @@ h1 {
     margin-bottom: 15px;
     border-left: 5px solid #FFD700;
 }
+
 .result-box {
     background-color: rgba(255,255,255,0.08);
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
+/********** Text inputs **********/
 .stTextInput > div > div > input {
     color: black !important;
     background-color: white !important;
@@ -48,17 +54,30 @@ h1 {
     color: #666666 !important;
     opacity: 1;
 }
-.stSelectbox div[data-baseweb="select"] {
+
+/********** Selectbox **********/
+.stSelectbox [data-baseweb="select"] > div {
     background-color: white !important;
+    border-radius: 8px !important;
 }
 
-.stSelectbox div[data-baseweb="select"] * {
+.stSelectbox [data-baseweb="select"] span {
     color: black !important;
 }
 
+.stSelectbox [data-baseweb="select"] input {
+    color: black !important;
+}
+
+.stSelectbox [data-baseweb="select"] svg {
+    fill: black !important;
+}
+
+/********** Slider labels **********/
 .stSlider label {
     color: white !important;
 }
+
 </style>
 """, unsafe_allow_html=True)
 
