@@ -23,23 +23,9 @@ An AI-powered movie recommendation system that recommends movies based on the us
 - **OpenRouter API**
 - **Pandas**
 - **NumPy**
-
 ## Workflow
 
-
--User Mood
-  -  ↓
--AI Mood Detection
-  -  ↓
--Mood-to-Genre Mapping
-  -  ↓
--Genre-Based Recommendation
- -   ↓
--Apply Filters
-  -  ↓
--Movie Recommendations
-   - ↓
--Optional Movie Assistant
+User Mood → AI Mood Detection → Mood-to-Genre Mapping → Movie Recommendation → Filters → Recommended Movies → Movie Assistant
 
 ## Project Structure
 MovieRecommendationSystem/
@@ -57,13 +43,20 @@ MovieRecommendationSystem/
     └── ratings.csv
 
 ## How It Works
--1.The user describes their current mood in natural language.
--2.The LLM analyzes the input and detects one of the supported moods.
--3.The detected mood is mapped to a suitable movie genre.
--4.Movies from that genre are selected from the dataset.
--5.Movies are filtered based on rating and release year.
--6.The highest-rated matching movies are displayed.
--7.The user can optionally ask questions about the recommended movies.
+
+1. User enters their mood.
+
+2. AI detects the mood.
+
+3. Mood is mapped to a movie genre.
+
+4. Movies are selected from the dataset.
+
+5. Rating and year filters are applied.
+
+6. Recommended movies are displayed.
+
+7. User can ask questions about the recommendations.
 
 ## Run Locally
 -**1.Clone the repository**
