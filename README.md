@@ -66,26 +66,26 @@ MovieRecommendationSystem/
 7.The user can optionally ask questions about the recommended movies.
 
 ## Run Locally
-**1.Clone the repository**
-git clone https://github.com/PRITHIBA-G/MovieRecommendationSystem.git
-cd MovieRecommendationSystem
-**2. Install dependencies**
-pip install -r requirements.txt
-**3. Configure the API key**
-Create a .env file in the project folder:
-OPENROUTER_API_KEY=your_api_key_here
-**4. Run the application**
-streamlit run app.py
+-**1.Clone the repository**
+-git clone https://github.com/PRITHIBA-G/MovieRecommendationSystem.git
+-cd MovieRecommendationSystem
+-**2. Install dependencies**
+-pip install -r requirements.txt
+-**3. Configure the API key**
+-Create a .env file in the project folder:
+-OPENROUTER_API_KEY=your_api_key_here
+-**4. Run the application**
+-streamlit run app.py
 ## Future Enhancements
-Add movie posters and trailers
-Improve mood detection accuracy
-Add more personalized recommendation logic
-Add movie search functionality
-Include additional movie metadata such as actors and directors
+-Add movie posters and trailers
+-Improve mood detection accuracy
+-Add more personalized recommendation logic
+-Add movie search functionality
+-Include additional movie metadata such as actors and directors
 ## Author
 Prithiba G
 Computer Science and Engineering Student
-GitHub: [profile](https://github.com/PRITHIBA-G)
-LinkedIn: [profile](https://linkedin.com/in/prithiba-govindan-249ab5353)
+-GitHub: [profile](https://github.com/PRITHIBA-G)
+-LinkedIn: [profile](https://linkedin.com/in/prithiba-govindan-249ab5353)
 ## License
 This project is developed as a student portfolio project for educational and learning purposes.
