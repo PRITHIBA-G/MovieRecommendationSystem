@@ -64,15 +64,9 @@ h1 {
     border-radius: 8px !important;
 }
 
-.stSelectbox [data-baseweb="select"] span {
+.stSelectbox [data-baseweb="select"] * {
     color: black !important;
     -webkit-text-fill-color: black !important;
-}
-
-.stSelectbox [data-baseweb="select"] input {
-    color: black !important;
-    -webkit-text-fill-color: black !important;
-    caret-color: black !important;
 }
 
 .stSelectbox [data-baseweb="select"] svg {
@@ -82,6 +76,7 @@ h1 {
 .stSelectbox [role="option"] {
     color: black !important;
     background-color: white !important;
+    -webkit-text-fill-color: black !important;
 }
 </style>
 """, unsafe_allow_html=True)
