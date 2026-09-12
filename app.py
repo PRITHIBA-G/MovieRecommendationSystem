@@ -40,7 +40,24 @@ h1 {
     margin-bottom: 20px;
 }
 .stTextInput > div > div > input {
-    color: black;
+    color: black !important;
+    background-color: white !important;
+}
+
+.stTextInput > div > div > input::placeholder {
+    color: #666666 !important;
+    opacity: 1;
+}
+.stSelectbox div[data-baseweb="select"] {
+    background-color: white !important;
+}
+
+.stSelectbox div[data-baseweb="select"] * {
+    color: black !important;
+}
+
+.stSlider label {
+    color: white !important;
 }
 </style>
 """, unsafe_allow_html=True)
