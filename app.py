@@ -54,8 +54,11 @@ h1 {
     color: #666666 !important;
     opacity: 1;
 }
-
 /********** Selectbox **********/
+.stSelectbox label {
+    color: white !important;
+}
+
 .stSelectbox [data-baseweb="select"] > div {
     background-color: white !important;
     border-radius: 8px !important;
@@ -63,10 +66,12 @@ h1 {
 
 .stSelectbox [data-baseweb="select"] span {
     color: black !important;
+    -webkit-text-fill-color: black !important;
 }
 
 .stSelectbox [data-baseweb="select"] input {
     color: black !important;
+    -webkit-text-fill-color: black !important;
     caret-color: black !important;
 }
 
@@ -74,11 +79,10 @@ h1 {
     fill: black !important;
 }
 
-/********** Slider labels **********/
-.stSlider label {
-    color: white !important;
+.stSelectbox [role="option"] {
+    color: black !important;
+    background-color: white !important;
 }
-
 </style>
 """, unsafe_allow_html=True)
 
