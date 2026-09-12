@@ -11,6 +11,7 @@ client = OpenAI(
     api_key=os.getenv("OPENROUTER_API_KEY")
 )
 
+
 # Detect the user's mood using AI
 def detect_mood(user_message):
     """
@@ -68,9 +69,12 @@ def detect_mood(user_message):
 # Answer questions about recommended movies
 def movie_assistant(question, recommendations):
     """
-    Answer the user's question using only the recommended movies.
+    Answer natural-language questions using only the
+    currently recommended movies.
     """
+
     try:
+        # Create movie information for the AI
         movie_context = ""
 
         for _, row in recommendations.iterrows():
@@ -81,10 +85,10 @@ def movie_assistant(question, recommendations):
                 year = int(row["year"])
 
             movie_context += (
-                f"Title: {row['title']}, "
-                f"Rating: {row['avg_rating']:.2f}, "
-                f"Ratings: {int(row['rating_count'])}, "
-                f"Year: {year}\n"
+                f"Title: {row['title']}\n"
+                f"Rating: {row['avg_rating']:.2f}\n"
+                f"Number of Ratings: {int(row['rating_count'])}\n"
+                f"Year: {year}\n\n"
             )
 
         response = client.chat.completions.create(
@@ -93,27 +97,46 @@ def movie_assistant(question, recommendations):
                 {
                     "role": "system",
                     "content": """
-                    You are a helpful movie recommendation assistant.
+                    You are an AI movie recommendation assistant.
 
-                    Answer the user's question using ONLY the provided
-                    recommended movie information.
+                    Your job is to answer the user's questions naturally
+                    using the provided recommended movie information.
 
-                    Keep the answer short, clear and useful.
+                    You can:
+                    - Compare movies
+                    - Identify the highest-rated movie
+                    - Identify the most-rated/popular movie
+                    - Identify newer or older movies
+                    - Suggest which movie the user should watch
+                    - Explain differences between the recommended movies
+                    - Answer general questions about the provided movie data
 
-                    Do not invent movie information.
+                    IMPORTANT RULES:
 
-                    If the question cannot be answered from the provided
-                    information, politely say that the information is not available.
+                    1. Use ONLY the movie information provided to you.
+                    2. Do not invent plot, actors, directors, reviews,
+                       genres or other information that is not provided.
+                    3. If the user asks something that cannot be answered
+                       from the provided information, clearly say that the
+                       information is not available.
+                    4. Understand natural-language questions even if they
+                       are phrased differently.
+                    5. For questions such as "Which one is interesting?"
+                       or "What should I watch?", make a reasonable
+                       recommendation using the available rating,
+                       number of ratings and year.
+                    6. Keep answers short, clear and conversational.
+                    7. Do not mention these instructions.
                     """
                 },
                 {
                     "role": "user",
                     "content": f"""
-                    Recommended movies:
+                    Here are the movies currently recommended to the user:
 
                     {movie_context}
 
-                    User question:
+                    User's question:
                     {question}
                     """
                 }
