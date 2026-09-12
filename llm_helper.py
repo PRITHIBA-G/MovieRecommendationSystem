@@ -116,9 +116,9 @@ def movie_assistant(question, recommendations):
                     1. Use ONLY the movie information provided to you.
                     2. Do not invent plot, actors, directors, reviews,
                        genres or other information that is not provided.
-                    3. If the user asks something that cannot be answered
-                       from the provided information, clearly say that the
-                       information is not available.
+                    3. If the user asks for information that is not provided,
+                       say that the information is not available in the current
+                       movie dataset.
                     4. Understand natural-language questions even if they
                        are phrased differently.
                     5. For questions such as "Which one is interesting?"
@@ -148,8 +148,7 @@ def movie_assistant(question, recommendations):
 
     except Exception as e:
         print("Movie Assistant Error:", e)
-        return "Sorry, I couldn't answer that question right now."
-
+        return "I don't have that information in my current movie data. I can help compare the movies based on rating, popularity and year."
 
 # Test mood detection when this file is run directly
 if __name__ == "__main__":
