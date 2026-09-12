@@ -27,19 +27,19 @@ An AI-powered movie recommendation system that recommends movies based on the us
 ## Workflow
 
 
-User Mood
-    ↓
-AI Mood Detection
-    ↓
-Mood-to-Genre Mapping
-    ↓
-Genre-Based Recommendation
-    ↓
-Apply Filters
-    ↓
-Movie Recommendations
-    ↓
-Optional Movie Assistant
+-User Mood
+  -  ↓
+-AI Mood Detection
+  -  ↓
+-Mood-to-Genre Mapping
+  -  ↓
+-Genre-Based Recommendation
+ -   ↓
+-Apply Filters
+  -  ↓
+-Movie Recommendations
+   - ↓
+-Optional Movie Assistant
 
 ## Project Structure
 MovieRecommendationSystem/
@@ -57,13 +57,13 @@ MovieRecommendationSystem/
     └── ratings.csv
 
 ## How It Works
-1.The user describes their current mood in natural language.
-2.The LLM analyzes the input and detects one of the supported moods.
-3.The detected mood is mapped to a suitable movie genre.
-4.Movies from that genre are selected from the dataset.
-5.Movies are filtered based on rating and release year.
-6.The highest-rated matching movies are displayed.
-7.The user can optionally ask questions about the recommended movies.
+-1.The user describes their current mood in natural language.
+-2.The LLM analyzes the input and detects one of the supported moods.
+-3.The detected mood is mapped to a suitable movie genre.
+-4.Movies from that genre are selected from the dataset.
+-5.Movies are filtered based on rating and release year.
+-6.The highest-rated matching movies are displayed.
+-7.The user can optionally ask questions about the recommended movies.
 
 ## Run Locally
 -**1.Clone the repository**
